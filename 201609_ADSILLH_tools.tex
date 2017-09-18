@@ -1,0 +1,183 @@
+%\documentclass[9pt,xcolor={dvipsnames},handout]{beamer}
+\documentclass[9pt,xcolor={dvipsnames}]{beamer}
+
+\mode<presentation>{
+  \usetheme{CambridgeUS}
+  \usecolortheme{sysnove}
+  \setbeamercovered{transparent}
+}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.95]{inconsolata}
+\usepackage{graphics}
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage{marvosym}
+\usepackage{eurosym}
+\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage[Q=yes]{examplep}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, xparse, listings, raster, breakable}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{babel, calc, tikzmark}
+
+% Garphics path
+\graphicspath{{imgs/}}
+
+% General document information
+\title[Outils de travail collaboratif]{{\small ADSILLH}\\Outils de travail collaboratif}
+\author[Alexis Lahouze]{Alexis~\textsc{Lahouze}\\
+  \medskip
+  \includegraphics[scale=0.5]{logo-sysnove}
+}
+\institute[Sysnove]{}
+\date{ADSILLH 2016 S1}
+
+% Color definitions
+\setbeamerfont{author in sidebar}{size=\footnotesize}
+\setbeamerfont{title in sidebar}{size=\footnotesize}
+\setbeamerfont{subsection in sidebar}{size=\scriptsize}
+\setbeamercolor{palette sidebar secondary}{fg=darkred}
+\setbeamercolor{title in sidebar}{fg=darkred}
+
+% Logo definition
+\logo{
+  \includegraphics[height=0.6cm]{logo-sysnove}
+  \hspace{0.5cm}
+}
+
+% Disable Beamer navigation bar
+\setbeamertemplate{navigation symbols}{}
+% Hide next entries when using \pause
+%\setbeamercovered{invisible}
+
+% Command to get the current section name
+\usepackage{nameref}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+% Automatically insert frame with current section summary
+\AtBeginSection[]
+{
+  \begin{frame}{\currentname}
+    \tableofcontents[
+      currentsection,
+      sectionstyle=show/shaded,
+      subsectionstyle=show/show/hide
+    ]
+  \end{frame}
+}
+
+% Automatically insert frame with current section summary
+\AtBeginSubsection[]
+{
+  \begin{frame}{\currentname}
+    \tableofcontents[
+      currentsection,
+      sectionstyle=show/shaded,
+      subsectionstyle=show/shaded/hide
+    ]
+  \end{frame}
+}
+
+% Define normal diff language for listings
+\lstdefinelanguage[normal]{diff}{
+  morecomment=[f][\color{BrickRed}]<,         % deleted lines 
+  morecomment=[f][\color{ForestGreen}]>,      % added lines
+}
+
+% Define context diff for listings
+\lstdefinelanguage[context]{diff}{
+  morecomment=[f][\textbf]{!},                      % modified lines
+  morecomment=[f][\color{BrickRed}]-,               % deleted lines 
+  morecomment=[f][\color{ForestGreen}]+,            % added lines
+  morecomment=[f][\color{BrickRed}]{***},    % original file information
+  morecomment=[f][\color{ForestGreen}]{---}, % modified file information
+  morecomment=[f][\color{black}]{***************},  % hunk separator
+}
+
+% Define unified diff for listings
+\lstdefinelanguage[unified]{diff}{
+  morecomment=[f][\color{blue}]{@@},          % group identifier
+  morecomment=[f][\color{BrickRed}]-,         % deleted lines 
+  morecomment=[f][\color{ForestGreen}]+,      % added lines
+  morecomment=[f][\color{BrickRed}]{---},     % original file
+  morecomment=[f][\color{ForestGreen}]{+++},  % modified file
+}
+
+% Basic listing style
+\lstset{
+  style=tcblatex,
+  basicstyle=\tiny\ttfamily,
+  numberstyle=\Tiny\ttfamily,
+  numbers=left,
+}
+
+% Define some base styles. Blankest has been copied from tcolorbox v2016.
+\tcbset{
+  blankest/.style={blanker, notitle, frame hidden,
+    no shadow, no underlay, no overlay, no finish, no borderline},
+  snvbase/.style={beamer, colback=red0!10!white,
+    colframe=red0!75!black, fonttitle=\tiny},
+}
+  
+% Global listing declaration
+\NewTCBListing{snvlisting}{ O{{}} m O{} O{} }{%
+  snvbase,
+  title=#2,
+  lowerbox=ignored,
+  listing only,
+  listing options={language={#1}, #4},
+  #3}%
+    
+\NewTCBInputListing{\snvinputlisting}{ O{{}} m m O{} O{} }{%
+  snvbase,
+  title=#2,
+  lowerbox=ignored,
+  left skip=-10pt,
+  listing only,
+  listing file=#3,
+  listing options={language={#1}, #5},
+  #4}%
+
+% TColorBox listing for shell.
+\NewTCBListing{shell}{ O{} O{\#} }{%
+  snvbase,
+  listing only,
+  every listing line={\bfseries {#2}\ },
+  listing options={language=sh},
+  #1}%
+
+% Finally the document
+\begin{document}
+
+% Title frame
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% Main table of contents
+\begin{frame}[squeeze]{Sommaire}
+  \tableofcontents[sectionstyle=show, subsectionstyle=show/show/show]
+\end{frame}
+
+\input{introduction}
+
+\input{developpement_tools}
+
+\input{documentation}
+
+\input{communication}
+
+\input{forges}
+
+\input{projets}
+
+\end{document}

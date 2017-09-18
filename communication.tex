@@ -1,0 +1,419 @@
+\section{Outils de Communication}
+
+\subsection{Notions générales}
+
+\begin{frame}[fragile]{Netiquette}
+\begin{itemize}[<+->]
+ \item Règles de bonne conduite sur les Internets
+ \item Network Etiquette
+ \item RFC1855~: \url{http://fgouget.free.fr/netiquette/rfc1855-fr.html}
+ \item Communications un à un (mail, messagerie instantanée)
+ \item Communications un à plusieurs (listes de diffusion, forums)
+ \item Forme
+ \begin{itemize}[<+->]
+  \item Écrire en entier (pas de langage SMS)~;
+  \item Écrire en minuscules, ÉCRIRE EN MAJUSCULES REVIENT À CRIER~;
+  \item Réponses sous questions~;
+  \item Ne pas dépasser 65 charactères dans un mail~;
+  \item Etc.
+ \end{itemize}
+ \item Fond
+ \begin{itemize}[<+->]
+  \item Politesse
+  \item Respect
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Types de communication}
+ \begin{itemize}[<+->]
+  \item Interne~:
+  \begin{itemize}[<+->]
+   \item Entre les membres du projets, et les contributeurs~;
+   \item Liés à l'évolution du projet.
+  \end{itemize}
+  \item Externe/publique~:
+  \begin{itemize}
+   \item Nouvelles du projet (versions, évolutions importantes).
+  \end{itemize}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Modes de communication}
+ \begin{itemize}[<+->]
+  \item Synchrones (messagerie instantanée)
+  \begin{itemize}[<+->]
+   \item IRC
+   \item ICQ
+   \item Aol Instant Messaging
+   \item MSN Messenger
+   \item XMPP
+   \item VoIP
+  \end{itemize}
+  \item Asynchrones
+  \begin{itemize}[<+->]
+   \item Usenet/Newsgroups
+   \item Mail
+   \item Forums
+  \end{itemize}
+ \end{itemize}
+\end{frame}
+
+\subsection{Communication synchrone}
+
+\begin{frame}[fragile]{Internet Relay Chat}
+\framesubtitle{Informations générales}
+\begin{itemize}[<+->]
+ \item RFC 1459 (août 1988), puis RFC 2810 à 2813 (2000)~;
+ \item Client-Serveur~;
+ \item Réseaux (plusieurs serveurs connectés entre eux)~;
+ \item Discussion orientée salon de discussion (canal, channel, chan)~;
+ \item \url{\#canal@reseau}~;
+ \item \url{utilisateur@reseau}~;
+ \item Modes utilisateur : Opérateur du réseau (o), invisible (i), \dots
+ \item Modes~: Opérateur (o), voice (v), Secret (s), \dots
+ \item Canal et pseudos volatiles.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Internet Relay Chat}
+\framesubtitle{Réseaux connus}
+\begin{itemize}[<+->]
+ \item IRCnet~: \url{http://www.ircnet.org}
+ \item DALnet~: \url{http://www.dal.net}
+ \item EFnet~: \url{http://www.efnet.org}
+ \item Undernet~: \url{http://www.undernet.org}
+ \item QuakeNet~: \url{http://www.quakenet.org}
+ \item Freenode~: \url{http://www.freenode.org}
+ \begin{itemize}[<+->]
+  \item Alexis Lahouze~: xals
+  \item Samuel Thibault~: youpi
+  \item Cyril Roelandt~: Steap
+  \item \url{\#aquilenet}
+  \item \url{\#adsillh}
+  \item \url{\#abul}
+ \end{itemize}
+ \item Geeknode~: \url{http://www.geeknode.org}
+ \begin{itemize}[<+->]
+  \item Alexis Lahouze~: xals
+  \item Samuel Thibault~: youpi
+  \item Cyril Roelandt~: Steap
+  \item \url{\#fdn}
+  \item \url{\#sysnove}
+ \end{itemize}
+ \item OFTC (Debian)~: \url{http://www.oftc.net}
+ \begin{itemize}[<+->]
+  \item \url{\#debian-fr}
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Internet Relay Chat}
+\framesubtitle{Bots}
+\begin{itemize}
+  \item À l'origine créés pour éviter une prise de contrôle par quelqu'un d'autre (takeover) d'un canal ou d'un pseudo en cas d'absence~;
+  \pause
+  \item Permettent de transférer des informations sur le canal~;
+  \pause
+  \item Peuvent réagir à des mots (commandes)~;
+  \pause
+  \item La plupart des réseaux ont leur propre bot de gestion~:
+  \begin{itemize}
+   \pause
+   \item Freenode~: ChanServ et NickServ
+   \pause
+   \item Geeknode~: C
+  \end{itemize}
+
+  \pause
+  \item Quelques logiciels de bot connus~:
+  \begin{itemize}
+   \pause
+   \item Supybot~;
+   \pause
+   \item Hubot~;
+   \pause
+   \item Eggdrop~;
+   \pause
+   \item Etc.
+  \end{itemize}
+ \end{itemize}
+\end{frame}
+ 
+\begin{frame}{Internet Relay Chat}
+\framesubtitle{Clients les plus connus}
+\begin{itemize}
+ \item Console~:
+ \begin{itemize}
+  \item BitchX (semble maintenu car derniers commits dans la journée, mais dernière release le 14 novembre 2014)
+  \pause
+  \item Irssi (toujours actif, dernière release le 21 septembre dernier)
+  \pause
+  \item Weechat (très actif)
+ \end{itemize}
+ \pause
+ \item Graphiques~:
+ \begin{itemize}
+  \item mIRC (Windows, développement toujours actif)~;
+  \pause
+  \item kvIRC (multiplateforme, anciennement KDE)~;
+  \pause
+  \item konversation (KDE)~;
+  \pause
+  \item XChat (GTK)~;
+  \pause
+  \item Chatzilla (extension Firefox)~;
+  \pause
+  \item Pidgin (GTK)~;
+  \pause
+  \item Passerelles XMPP <-> IRC.
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{XMPP (Jabber)}
+\framesubtitle{Informations générales}
+\begin{itemize}
+ \item Créé en 1998, standardisé IETF en 2002 (RFC 3920 à 3923)~;
+ \pause
+ \item Client-Serveur-Serveur (interconnexion des domaines)~;
+ \pause
+ \item Orienté discussion un à un (comme ICQ)~;
+ \pause
+ \item Liste de contacts~;
+ \pause
+ \item Chiffrage bout en bout avec OTR et PGP.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{XMPP (Jabber)}
+\framesubtitle{Logiciels Clients}
+\begin{itemize}
+ \item Pidgin (multiplateforme)
+ \pause
+ \item Gajim (multiplateforme)
+ \pause
+ \item Psi (multiplateforme)
+ \pause
+ \item Xabber (Android)
+ \pause
+ \item Conversations (Android)
+ \pause
+ \item Kopete (Linux, multiprotocole)
+ \pause
+ \item Miranda IM (Windows, multiprotocole)
+ \pause
+ \item Jappix (Web/Ajax)
+ \pause
+ \item Bitlbee (Linux, serveur IRC, client multiprotocole)
+ \pause
+ \item Etc.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{XMPP (Jabber)}
+\framesubtitle{Logiciels Serveurs}
+\begin{itemize}
+ \item Jabberd14 (C)~;
+ \pause
+ \item Jabberd2 (C)~;
+ \pause
+ \item eJabberd (erlang)~;
+ \pause
+ \item Prosody (Lua)~;
+ \pause
+ \item Tigase (Java)~;
+ \pause
+ \item Etc.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{XMPP (Jabber)}
+\framesubtitle{Services XMPP connus}
+\begin{itemize}
+ \item GTalk (Google)
+ \pause
+ \item im.apinc.org (FR)
+ \pause
+ \item jabber.im
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Autres systèmes}
+\begin{itemize}
+ \item La plupart propriétaires~;
+ \pause
+ \item Slack~;
+ \begin{itemize}
+  \item Notion d'équipes~;
+  \pause
+  \item Possibilité de connecter des applications externes~;
+  \pause
+  \item Utilisé par les startups.
+ \end{itemize}
+ \pause
+ \item Gitter (github)~;
+ \begin{itemize}
+  \item Orienté projet.
+ \end{itemize}
+ \pause
+ \item Certains réseaux sociaux~;
+ \pause
+ \item Etc.
+\end{itemize}
+\end{frame}
+
+\subsection{Communication asynchrone}
+
+\begin{frame}{Notion de base}
+ \begin{itemize}
+  \item On sait quand ça part, mais on ne sait pas quand ça arrive.
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Usenet/Newsgroups}
+\begin{itemize}
+ \item Inventé en 1979~;
+ \pause
+ \item Client-serveur~;
+ \pause
+ \item Protocole UUCP (Unix to Unix Copy Protocol) puis NNTP (Network News Transfer Protocol)~;
+ \pause
+ \item Réseau de forums~;
+ \pause
+ \item Génération, stockage et récupération d'articles~;
+ \pause
+ \item Très proche du mail~;
+ \pause
+ \item Notion de groupes et d'abonnements à ces groupes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Mails}
+\framesubtitle{Informations générales}
+\begin{itemize}
+ \item Prémisses en 1965~;
+ \pause
+ \item RFC 561 en 1971, puis RFC 680, 724 et enfin 733 en 1977~: entêtes et protocole~;
+ \pause
+ \item RFC 822 en 1982~: format des messages~;
+ \pause
+ \item RFC 2045 à 2049~: MIME~;
+ \pause
+ \item RFC 2822 en 2001~: remplace la 822~;
+ \pause
+ \item RFC 5322 en 2008~: étend la 2822~;
+ \pause
+ \item Client-Serveur-Serveur~;
+ \pause
+ \item Chiffrage avec PGP (clé asymétrique), ou S/MIME (certificat numérique)~;
+ \pause
+ \item Organisation par sujets (threads)~:
+ \begin{itemize}
+  \pause
+  \item Entête \verb/In-Reply-To/.
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mails}
+\framesubtitle{Mailing-lists}
+\begin{itemize}
+ \item Mails gérés par un robot de liste, ou gestionnaire de listes~;
+ \pause
+ \item Le gestionnaire permet de gérer les abonnements~;
+ \pause
+ \item Adresse de destination unique~;
+ \pause
+ \item Redirection à tous les abonnés~;
+ \pause
+ \item Utilisées pour communiquer entre les membres de l'équipe~;
+ \pause
+ \item Utilisées pour communiquer avec l'extérieur (newsletters)~;
+ \pause
+ \item Souvent couplées à une interface web de gestion~;
+ \pause
+ \item Archives~;
+ \pause
+ \item Aggrégateurs de listes publiques~:
+ \begin{itemize}
+ \pause
+  \item \url{http://www.gmane.org} (listes de diffusion et newsgroups)~;
+ \end{itemize}
+
+ \pause
+ \item Moteurs connus~:
+ \begin{itemize}
+  \pause
+  \item Sympa
+  \pause
+  \item Mailman
+  \pause
+  \item Majordomo
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mails}
+\framesubtitle{Mailing-lists, entêtes spécifiques}
+\begin{description}
+ \item RFC 4021~;
+ \pause
+ \item [List-ID] Identifiant de la liste, permet une classification~;
+ \pause
+ \item [List-Owner] Adresse du propriétaire de la liste~;
+ \pause
+ \item [List-Post] Adresse d'envoi de la liste~;
+ \pause
+ \item [List-Subscribe] Adresse d'abonnement à la liste~;
+ \pause
+ \item [List-Unsubscribe] Adresse de désabonnement de la liste~;
+ \pause
+ \item [List-Help] Adresse pour obtenir de l'aide sur la liste~;
+ \pause
+ \item [List-Archive] Adresse de l'archive de la liste.
+\end{description}
+\end{frame}
+
+\begin{frame}[fragile]{Forum}
+\begin{itemize}[<+->]
+ \item Site web~;
+ \pause
+ \item Hierachie~: Catégories, Sujets, Messages~;
+ \pause
+ \item Souvent des passerelles mails (envoi et gestion des réponses)~:
+ \begin{itemize}[<+->]
+  \item catégorie => mailing list~;
+  \pause
+  \item sujet => thread~;
+  \pause
+  \item message => mail.
+ \end{itemize}
+ \pause
+ \item \url{https://www.hardware.fr}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bugtrackers}
+\begin{itemize}
+ \item Site web, mailing lists
+ \pause
+ \item Permet de recencer et suivre les tâches du projet
+ \pause
+ \item Anomalies (bugs) et fonctionnalités
+ \pause
+ \item Moteurs connus~:
+ \begin{itemize}
+  \item Bugzilla~;
+  \pause
+  \item Mantis~;
+  \pause
+  \item Flyspray~;
+  \pause
+  \item Debian BTS (emails, chaque bug est une liste de diffusion)~;
+  \pause
+  \item Forges.
+ \end{itemize}
+\end{itemize}
+\end{frame}
