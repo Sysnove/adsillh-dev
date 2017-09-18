@@ -15,3 +15,8 @@ Compilation
 -----------
 
 TODO Alexis Lahouze 2017-09-18 A écrire.
+
+Git flow
+--------
+
+Add feature branch example;
