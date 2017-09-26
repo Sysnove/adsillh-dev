@@ -4,20 +4,15 @@ Cours ADSILLH Outils de travail collaboratif
 Dépendances
 -----------
 
-latextopdf
+Sur Debian, vous devez installer l'environnement TeXlive complet :
 
-=======
-Fichier final
---------------
-
-201609_ADSILLH_tools.pdf
+    apt install teslive-full
 
 Compilation
 -----------
 
-TODO Alexis Lahouze 2017-09-18 A écrire.
+Pour compiler, lancer la commande suivante :
+ 
+    pdflatex -interaction=nonstopmode 201609_ADSILLH_tools.tex
 
-Git flow
---------
-
-Add feature branch example;
+Le fichier 201609_ADSILLH_tools.pdf sera généré.
