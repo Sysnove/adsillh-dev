@@ -553,22 +553,71 @@ Untracked files:
 \end{frame}
 
 \begin{frame}[fragile]{Git}
- \frametitle{Exemples - Cas simple}
+ \frametitle{Exemples - Cas simple - initialisation}
  \begin{itemize}[<+->]
   \item Créer un dépôt sur Github
-  \item Configurer son git local (user, email)
-  \item Initialiser la copie locale
-  \item Ignorer les fichiers constructibles, temporaires, etc.
-  \item Ajouter les fichiers nécessaires au projet
-  \item Commiter la branche \verb/master/
-  \item Créer une branche \verb/develop/ et basculer dessus
-  \item Ajouter un fichier README
-  \item Ajouter dans le cache
-  \item Commiter
-  \item Modifier un fichier
-  \item Ajouter dans le cache
-  \item Commiter
-  \item Merger dans \verb/master/
+  \item Initialiser la copie locale: \verb/git init/
+  \item Configurer son git local (user, email): \verb/git config  user.name 'Alexis Lahouze'/ \verb/git config user.email 'alexis@sysnove.fr'/
+  \item Ignorer les fichiers constructibles, temporaires, etc. \verb/vim .gitignore/ (rajouter par exemple \verb/.*.sw?/, \verb/*.log/, \verb/*.out/, etc \dots)
+  \item Ajouter les fichiers nécessaires au projet: \verb\git add *.kilepr *.tex imgs/* *.txt\
+  \item Commiter la branche \verb/master/ : \verb\git commit -m "Initialize repository."\
  \end{itemize}
+\end{frame}
 
+\begin{frame}[fragile]{Git}
+ \frametitle{Exemples - Cas simple - développement dans branche develop }
+ \begin{itemize}[<+->]
+  \item Créer une branche \verb/develop/ et basculer dessus: \verb\git checkout -b develop\
+  \item Ajouter un fichier README: \verb\vim README.md\
+  \item Ajouter dans le cache: \verb\git add README.md\
+  \item Commiter: \verb\git commit -m "Add readme."\
+  \item Pousser la branche develop: \verb\git push -u origin develop\
+  \item Modifier un fichier: \verb\vim forges.tex\
+  \item Ajouter dans le cache: \verb\git add -p forges.tex\
+  \item Commiter: \verb\git commit -m "Improve forges.tex"\
+  \item Pousser à nouveau: \verb\git push\
+  \item Merger dans \verb/master/ : \verb\git checkout master\ , \verb\git merge develop\
+ \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Git}
+ \frametitle{Exemples - Cas simple - Remisage }
+ \begin{itemize}[<+->]
+  \item Modifier un fichier, par exemple README.md
+  \item Remiser les modifications: \verb\git stash\
+  \item Afficher les données remisées: \verb\git stash list\
+  \item Afficher un remisage particulier: \verb/git stash show stash@\{1\}/
+  \item Récupérer les modifications distantes: \verb\git pull\
+  \item Réappliquer les modifications remisées: \verb\git stash pop\
+  \item Éventuellement éditer les conflits: \verb\git mergetool\
+  \item Valider la gestion du conflit: \verb\git commit --no-edit\
+  \item Ajouter les modifications du fichier README.md: \verb\git add -p README.md\
+  \item Pousser toutes les modifications: \verb\git push\
+ \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Git}
+ \frametitle{Exemples - Cas simple - Rebase }
+ \begin{itemize}[<+->]
+  \item Importer les modifications de la branche parente: \verb\git rebase\
+  \item Editer les conflits si nécessaire: \verb\git mergetool\
+  \item Continuer le rebasage: \verb\git rebase --continue\
+  \item Afficher l'état du dépôt: \verb\git status\
+ \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Git}
+ \frametitle{Exemples - Git flow }
+ \begin{itemize}[<+->]
+  \item Installer git flow sous Debian ou Ubuntu: \verb\sudo apt install git-flow\
+  \item Initialiser git flow dans le dépôt: \verb\git flow init\
+  \item Répondre aux questions (production release: \verb\master\, next release: \verb\develop\, etc \dots)
+  \item Créer une nouvelle branche de feature: \verb\git flow feature start mafeature\
+  \item Vérifier les branches présentes: \verb\git branch\
+  \item Éditer, commiter, etc.
+  \item Publier pour que d'autres participent au développement: \verb\git flow feature publish\
+  \item Récupérer les modifications des autres: \verb\git pull\
+  \item Récupérer les dernières features et corrections terminées: \verb\git flow feature rebase\
+  \item Terminer la feature: \verb\git flow feature finish\
+ \end{itemize}
 \end{frame}
